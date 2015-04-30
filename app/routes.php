@@ -4,7 +4,7 @@
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
-|
+|http://image.intervention.io/getting_started/installation#laravel
 | Here is where you can register all of the routes for an application.
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the Closure to execute when that URI is requested.
@@ -20,6 +20,7 @@ Route::post('signup', ['as'=>'signup', 'uses'=>'AuthController@postSignup']);
 Route::get('login', ['as'=>'login', 'uses'=>'AuthController@getLogin']);
 Route::post('login', 'AuthController@postLogin');
 Route::get('logout', 'AuthController@getLogout');
+Route::get('image', 'ImageController@getLogout');
 
 // Secure Routes
 Route::group(['before'=>'auth'], function() {
